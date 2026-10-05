@@ -29,7 +29,7 @@ const pedidoSchema = new mongoose.Schema({
     {
     producto: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product', // Nombre de tu modelo de producto
+        ref: 'Producto', // Nombre de tu modelo de producto
         required: true
     },
     nombre: {
