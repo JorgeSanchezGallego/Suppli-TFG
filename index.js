@@ -5,12 +5,14 @@ const app = express();
 const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 const { connectDB } = require('./src/config/db');
+const { conectarCloudinary } = require('./src/config/cloudinary');
 
 
 app.use(express.json());
 app.use(cors());
 
 connectDB();
+conectarCloudinary();
 
 app.use((req, res, next) => {
     return res.status(404).json({ error: 'Route not found' });
